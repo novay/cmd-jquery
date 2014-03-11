@@ -1,5 +1,7 @@
 $(function() {
 
+    var url_home = 'http://novay.web.id/';
+
     $("#cmd").terminal(function(cmd, term){ command(cmd, term) }, {
         prompt : "C:\\Users\\Novay>",
         greetings:
@@ -63,6 +65,10 @@ $(function() {
             case "cd ": 
                 term.echo("The syntax of the command is incorrect."+"\n");
             break;
+
+            case "exit": 
+                $(location).prop('href', url_home);
+            break;         
 
             default: 
                 term.echo(
