@@ -1,5 +1,7 @@
 $(function() {
 
+    var url_home = 'http://novay.web.id/';
+
     $("#cmd").terminal(function(cmd, term){ command(cmd, term) }, {
         prompt : "C:\\Users\\Novay>",
         greetings:
@@ -19,7 +21,7 @@ $(function() {
                     "ABOUT\t\t\t Display all information about this site."+"\n"+
                     "CLS\t\t\t   Clears the screen."+"\n"+
                     "CONTACT\t\t   Display Website Creator."+"\n"+
-                    "EXIT\t\t   Quits the Console program (Through missing place.)."+"\n"+
+                    "EXIT\t\t      Quits the Console program (Through missing place.)."+"\n"+
                     "HELP\t\t\t  Provides Help information for Console commands."+"\n"+
                     "\n"+
                     "For more information on a specific command, type the command-name."+"\n"
@@ -63,6 +65,10 @@ $(function() {
             case "cd ": 
                 term.echo("The syntax of the command is incorrect."+"\n");
             break;
+
+            case "exit": 
+                $(location).prop('href', url_home);
+            break;         
 
             default: 
                 term.echo(
