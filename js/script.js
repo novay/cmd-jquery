@@ -5,7 +5,7 @@ $(function() {
     $("#cmd").terminal(function(cmd, term){ command(cmd, term) }, {
         prompt : "C:\\Users\\Novay>",
         greetings:
-            "Command Prompt Console [Version jQuery]\n"+
+            "Command Prompt Console [jQuery Version]\n"+
             "(c) 2014 Noviyanto Rachmadi. All rights reserved.\n",
     });
 
